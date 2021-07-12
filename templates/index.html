@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FLIGHT DELAY CLASSIFICATION</title>
+    <style>
+        div{float:left;
+            padding:20px;
+            border:2px solid black;
+            margin:10px;
+        }
+
+        .center{
+            display:block;
+            margin-left:auto;
+            marin-right:auto;
+        }
+
+        input{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;}
+
+
+
+    </style>
+</head>
+<body>
+<center><h1>FLIGHT DELAY CLASSIFICATION</h1></center>
+
+
+<form action="{{url_for('predict')}}" method="POST">
+    <!--    1-->
+    <datalist id="Quarter">
+        <option value='0.43874662'>
+    </datalist>
+    <!--    2-->
+    <datalist id="Month">
+        <option value="0.42842059">
+    </datalist>
+    <!--    3-->
+    <datalist id="DayofMonth">
+        <option value="-1.68049286">
+    </datalist>
+    <!--    4-->
+    <datalist id="Origin">
+        <option value="-0.49627573">
+    </datalist>
+    <!--    5-->
+    <datalist id="Dest">
+        <option value="0.40885022">
+    </datalist>
+    <!--    6-->
+    <datalist id="CRSDepTime">
+        <option value="-0.0301369">
+    </datalist>
+    <!--    7-->
+    <datalist id="DepTime">
+        <option value="-0.05061675">
+    </datalist>
+    <!--    8-->
+    <datalist id="DepDelayMinutes">
+        <option value="-0.33904372">
+    </datalist>
+    <!--    9-->
+    <datalist id="windspeedKmph">
+        <option value="0.10225356">
+    </datalist>
+    <!--    10-->
+    <datalist id="DewPointF">
+        <option value="1.27791438">
+    </datalist>
+    <!--    11-->
+    <datalist id="cloudcover">
+        <option value="-0.29348574">
+    </datalist>
+    <!--    12-->
+    <datalist id="precipMM">
+        <option value="-0.16011233">
+    </datalist>
+    <!--    13-->
+    <datalist id="pressure">
+        <option value="-0.18090787">
+    </datalist>
+    <!--    14-->
+    <datalist id="WindGustKmph">
+        <option value="-0.18496849">
+    </datalist>
+    <!--    15-->
+    <datalist id="visibility">
+        <option value="0.30950055">
+    </datalist>
+    <!--    16-->
+    <datalist id="weatherCode">
+        <option value="-0.47348545">
+    </datalist>
+    <!--    17-->
+    <datalist id="tempF">
+        <option value="1.55427002">
+    </datalist>
+    <!--    18-->
+    <datalist id="WindChillF">
+        <option value="1.47192771">
+    </datalist>
+    <!--    19-->
+    <datalist id="winddirDegree">
+        <option value="-1.1734422">
+    </datalist>
+    <!--    20-->
+    <datalist id="humidity">
+        <option value="-0.68082526">
+    </datalist>
+    <div>
+
+        <div>
+            <h2>Quarter</h2>
+            <input list="Quarter" name="cap_shape" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>Month</h2>
+            <input list="Month" name="cap_surface" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>DayofMonth</h2>
+            <input list="DayofMonth" name="cap_color" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>Origin</h2>
+            <input list="Origin" name="bruises" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>Dest</h2>
+            <input list="Dest" name="odor" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>CRSDepTime</h2>
+            <input list="CRSDepTime" name="gill_attachment" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>DepTime</h2>
+            <input list="DepTime" name="gill_spacing" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>DepDelayMinutes</h2>
+            <input list="DepDelayMinutes" name="gill_size" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>windspeedKmph</h2>
+            <input list="windspeedKmph" name="grill_color" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>DewPointFe</h2>
+            <input list="DewPointF" name="stalk_shape" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>cloudcover</h2>
+            <input list="cloudcover" name="stalk_root" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>precipMM</h2>
+            <input list="precipMM" name="stalk_surface_above_ring" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>pressure</h2>
+            <input list="pressure" name="stalk_surface_below_ring" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>WindGustKmph</h2>
+            <input list="WindGustKmph" name="stalk_color_below_ring" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>visibility</h2>
+            <input list="visibility" name="stalk_color_above_ring" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>weatherCode</h2>
+            <input list="weatherCode" name="veil_type" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>tempF</h2>
+            <input list="tempF" name="veil_color" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>WindChillF</h2>
+            <input list="WindChillF" name="ring_number" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>winddirDegree</h2>
+            <input list="winddirDegree" name="ring_type" placeholder="Enter a value">
+        </div>
+        <div>
+            <h2>humidity</h2>
+            <input list="humidity" name="spore_print_color" placeholder="Enter a value">
+        </div>
+    </div>
+    <button class="res_bt" type="submit"  style="display:block;margin-left:auto;margin-right:auto;padding:10px;">RESULT</button>
+</form>
+<!--<button class="res_bt center" type="submit" >RESULT</button>-->
+
+
+{% if  output %}
+
+<h1 style="text-align:center;"> {{output}}</h1>
+{% endif %}
+
+
+</body>
+</html>
